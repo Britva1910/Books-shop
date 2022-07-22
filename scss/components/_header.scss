@@ -1,0 +1,13 @@
+.header{
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 2px 19px -6px rgba(0,0,0,0.25);
+}
+
+
+.header__title{
+	margin: 15px 5px;
+	@include font($family: Roboto, $size: 3.5rem, $weight: normal);
+}

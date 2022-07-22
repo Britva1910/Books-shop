@@ -1,0 +1,17 @@
+.btn{
+	margin: 10px 5px;
+	height: 30px;
+	width: 120px;
+	background-color: rgb(14, 2, 36);
+	@include font($family: Roboto, $size: 1.3rem, $weight: normal);
+	border-radius: 15px 0 15px 0;
+	color: azure;
+	border: none;
+	 &:hover {
+        //background-color: $color-hovered;
+        transform: scale(1.05);
+        transition: all .3s ease;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+		cursor: pointer;
+    }
+}

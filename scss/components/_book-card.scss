@@ -1,0 +1,38 @@
+.card-wrapper {
+	height: 200px;
+	max-width: 600px;
+	margin: 70px auto;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.card-book-img {
+	width: 150px;
+	height: auto;
+	//background-image: url(../../assets/images/book_1.webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	box-shadow: -12px 12px 29px -1px rgba(0,0,0,0.75);
+	cursor: pointer;
+}
+
+.card-description__wrapper {
+	flex-basis: 60%;
+	//padding: 15px;
+}
+
+.card-description__title {
+margin-bottom: 15px;
+@include font($family: Inconsolata, $size: 2.6rem, $weight: bold);
+}
+
+.card-description__author {
+	margin-bottom: 30px;
+@include font($family: Roboto, $size: 1.5rem, $weight: normal);
+color: gray;
+}
+
+.card-description__price {
+@include font($family: Roboto, $size: 2.0rem, $weight: normal);
+}
