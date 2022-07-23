@@ -11,19 +11,21 @@ export class App extends Control {
 		this.headerTitle = new Control(this.header.node, 'h1', 'header__title', 'Book Shop');
 		this.headerSubtitle = new Control(this.header.node, 'div', 'header__subtitle', 'online store');
 		this.bagIcon = new Control(this.header.node, 'div', 'bag__icon');
-		//this.counter = new Control(this.header.node, 'div', 'counter', '1');
 		this.wrapper = new Control(this.fragment, 'div', 'wrapper');
+		this.bag = new Bag();
+		this.bagIcon.node.onclick = () => {
+			this.bag.showBagPage();
+		}
 
 	}
 
 	renderPage() {
-		const bag = new Bag();
 		this.data.forEach(element => {
 			const { author, imageLink, title, price, description } = element;
 			const card = new Card(author, imageLink, title, price, description);
 			card.addBookInBag = (object) => {
-				bag.bookStorage.push(object);
-				bag.showCounter();
+				this.bag.bookStorage.push(object);
+				this.bag.showCounter();
 			};
 
 			const item = card.getCard(element);

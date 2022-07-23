@@ -519,4 +519,34 @@ html {
   margin: 20px 0;
 }
 
+.bag__icon {
+  cursor: pointer;
+}
+
+.bag__wrapper {
+  position: absolute;
+  left: calc(50vw - 300px);
+  top: 150px;
+  width: 600px;
+  height: 70%;
+  background-color: bisque;
+  border: 2px solid black;
+}
+
+.book {
+  display: flex;
+}
+
+.book-image {
+  width: 30px;
+  height: 40px;
+}
+
+.btn-delete {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../assets/cross-icon.png);
+  background-size: contain;
+}
+
 /*# sourceMappingURL=style.css.map */
