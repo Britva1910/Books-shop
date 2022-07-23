@@ -22,7 +22,6 @@ export class Popup extends Control {
 		</div>
 		`; */
 		const popup = new Control(this.fragment, 'div', 'popup__wrapper');
-		//popup.node.style.top = `${positionY - 250}px`;
 		const popupImg = new Control(popup.node, 'img', 'popup__image');
 		popupImg.node.src = this.data.imageLink;
 		const wrapperLeft = new Control(popup.node, 'div', 'popup__inner-container-left');
@@ -39,7 +38,6 @@ export class Popup extends Control {
 		btnClose.node.onclick = () => {
 			popup.destroy();
 		}
-
 
 		document.body.appendChild(this.fragment);
 

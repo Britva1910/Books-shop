@@ -29,13 +29,14 @@ export class Card {
 		const btnShowMore = new Control(btnWrapper.node, 'button', 'btn btn-active', 'Show more');
 		const btnSendBag = new Control(btnWrapper.node, 'button', 'btn btn-active', 'Send to bag');
 
-		btnShowMore.node.onclick = (event) => {
+		btnShowMore.node.onclick = () => {
 			const popup = new Popup(dataObject);
-			popup.showPopup(event.pageY);
-			console.log(event.pageY);
+			popup.showPopup();
 		}
 
-
+		btnSendBag.node.onclick = () => {
+			this.addBookInBag(dataObject);
+		}
 
 
 

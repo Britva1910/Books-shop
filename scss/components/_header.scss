@@ -1,13 +1,42 @@
 .header{
 	margin-bottom: 30px;
+	position: fixed;
+	width: 100%;
+	height: 90px;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	box-shadow: 0 2px 19px -6px rgba(0,0,0,0.25);
+	background-color: aliceblue;
 }
 
 
 .header__title{
 	margin: 15px 5px;
 	@include font($family: Roboto, $size: 3.5rem, $weight: normal);
+}
+
+.bag__icon {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 100px;
+	top: 20px;
+	background-image: url(../../assets/bag-icon.png);
+	background-size: contain;
+}
+
+.counter {
+	padding: 4px;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	right: 100px;
+	top: 53px;
+	background-color: rgb(169, 231, 233);
+	border-radius: 50%;
+	text-align: center;
+	@include font($family: Roboto, $size: 1.5rem, $weight: normal);
+
 }

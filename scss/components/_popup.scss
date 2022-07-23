@@ -5,19 +5,19 @@
 	top: calc(50vh - 200px);
 	left: calc(50vw - 300px);
 	display: flex;
-	background-color: antiquewhite;
-	border: 2px solid black; 
+	background-color: antiquewhite; 
 }
 
 .popup__inner-container-left{
 	flex-basis: 35%;
-	background-color: rgb(177, 106, 212);
+		background-color: rgb(180, 236, 240);
+
 }
 
 .popup__inner-container-right {
 	padding-left: 50px;
 	flex-basis: 65%;
-	background-color: rgba(128, 128, 128, 0.521);
+	background-color: rgba(211, 205, 205, 0.856);
 }
 
 .popup__image {

@@ -1,6 +1,6 @@
 .card-wrapper {
 	height: 200px;
-	max-width: 600px;
+	width: 540px;
 	margin: 70px auto;
 	display: flex;
 	justify-content: space-between;
@@ -30,7 +30,7 @@ margin-bottom: 15px;
 .card-description__author {
 	margin-bottom: 30px;
 @include font($family: Roboto, $size: 1.5rem, $weight: normal);
-color: gray;
+color: grey;
 }
 
 .card-description__price {
