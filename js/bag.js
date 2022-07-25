@@ -1,4 +1,5 @@
 import Control from "./control.js";
+import { Form } from "./form.js";
 
 export class Bag extends Control {
 	constructor() {
@@ -37,7 +38,9 @@ export class Bag extends Control {
 		const btnConfirm = new Control(bagWrapper.node, 'btn', 'btn btn-active', 'Confirm');
 		const btnClose = new Control(bagWrapper.node, 'btn', 'btn btn-active', 'Close');
 		btnConfirm.node.onclick = () => {
-
+			const form = new Form();
+			form.showForm();
+			bagWrapper.destroy();
 		};
 		btnClose.node.onclick = () => {
 			bagWrapper.destroy();
