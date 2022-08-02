@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+	<form action="#">
+		<fieldset id="fieldset">
+			<div class="text-field">
+				<label class="text-field__label" for="name">Name*</label>
+				<input class="text-field__input field-valid" type="text" required pattern="[a-zA-Z]{4,}" id="name">
+				<div class="input__masage-invalid masage-hidden">Please fill out this field, min 4 letters</div>
+			</div>
+			<div class="text-field">
+				<label class="text-field__label" for="surname">Surname*</label>
+				<input class="text-field__input" type="text" required pattern="[a-zA-Z]{5,}" id="surname">
+				<div class="input__masage-invalid masage-hidden">Please fill out this field, min 5 symbols</div>
+			</div>
+			<div class="text-field">
+				<label class="text-field__label" for="date">Delivery date*</label>
+				<input class="text-field__input" type="date" minlength="10" maxlength="10"
+					pattern="^([0-1][0-9]|(3)[0-1])([\/])(((0)[0-9])|((1)[0-2]))([\/])([0-9]{4})$" required id="date">
+				<div class="input__masage-invalid masage-hidden">Please fill out this field, not earlier than tomorrow
+				</div>
+			</div>
+			<div class="text-field">
+				<label class="text-field__label" for="street">Street*</label>
+				<input class="text-field__input" type="text" required pattern="[0-9a-zA-Z]{5,}" id="street">
+				<div class="input__masage-invalid masage-hidden">Please fill out this field, min 5 symbols</div>
+			</div>
+			<div class="text-field">
+				<label class="text-field__label" for="house-number">House number*</label>
+				<input class="text-field__input" type="text" required pattern="[0-9]" min="1" id="house-number"
+					placeholder="Surname">
+				<div class="input__masage-invalid masage-hidden">Please fill out this field, positive numbers only</div>
+			</div>
+			<div class="text-field">
+				<label class="text-field__label" for="flat-number">Flat number*</label>
+				<input class="text-field__input" type="text" required pattern="([1-9][\d]*|[1-9][\d]*-[1-9][\d]*)"
+					id="flat-number" placeholder="Surname">
+				<div class="input__masage-invalid masage-hidden">Please fill out this field, positive numbers only</div>
+			</div>
+			<fieldset class="radio__wrapper">
+				<legend class="">Choose the payment type*</legend>
+				<label class="radio-btn">
+					<input type="radio" name="radio" checked />
+					<span class="radio-title">Cash</span>
+				</label>
+				<label class="radio-btn">
+					<input type="radio" name="radio" />
+					<span class="radio-title">Card</span>
+				</label>
+			</fieldset>
+			<fieldset class="checkbox__wrapper">
+				<legend class="text-field__label">Choose 2 gifts</legend>
+				<label class="checkbox-btn">
+					<input class="checkbox" type="checkbox" name="gift-1" id="gift-1">
+					<span class="checkbox-title">pack as a gift</span>
+				</label>
+				<label class="checkbox-btn">
+					<input class="checkbox" type="checkbox" name="gift-1" id="gift-1">
+					<span class="checkbox-title">add postcard</span>
+				</label>
+				<label class="checkbox-btn">
+					<input class="checkbox" type="checkbox" name="gift-1" id="gift-1">
+					<span class="checkbox-title">provide 2% discount to the next time</span>
+				</label>
+				<label class="checkbox-btn">
+					<input class="checkbox" type="checkbox" name="gift-1" id="gift-1">
+					<span class="checkbox-title">branded pen or pencil</span>
+				</label>
+			</fieldset>
+		</fieldset>
+		<button class="btn btn-complite" type="submit" disabled>Complete</button>
+	</form>
+</body>
+<script src="form.js"></script>
+
+</html>

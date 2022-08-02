@@ -7,20 +7,7 @@ export class Popup extends Control {
 		this.fragment = document.createDocumentFragment();
 	}
 	showPopup(positionY) {
-		/* const content = `
-		<img class="popup__image" src="${this.data.imageLink}" alt="">
-		<div class="popup__inner-container-left"></div>
-		<div class="popup__inner-container-right">
-			<div class="card-description__title">${this.data.title}</div>
-			<div class="card-description__author">${this.data.author}</div>
-			<div class="card-description__description">${this.data.description}</div>
-			<div class="card-description__price">$${this.data.price}</div>
-			<div class="btn-wrapper">
-				<button type="submit" class="btn btn-active"> Buy</button>
-				<button type="submit" class="btn btn-active"> Close</button>
-			</div>
-		</div>
-		`; */
+
 		const popup = new Control(this.fragment, 'div', 'popup__wrapper');
 		const popupImg = new Control(popup.node, 'img', 'popup__image');
 		popupImg.node.src = this.data.imageLink;

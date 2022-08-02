@@ -1,5 +1,4 @@
 import Control from "./control.js";
-import { Form } from "./form.js";
 
 export class Bag extends Control {
 	constructor() {
@@ -35,12 +34,17 @@ export class Bag extends Control {
 				this.showCounter();
 			};
 		});
-		const btnConfirm = new Control(bagWrapper.node, 'btn', 'btn btn-active', 'Confirm');
+		const btnConfirm = new Control(bagWrapper.node, 'a', 'btn btn-active', 'Confirm');
 		const btnClose = new Control(bagWrapper.node, 'btn', 'btn btn-active', 'Close');
+
+		btnConfirm.node.href = '../form-page/form.html';
+
 		btnConfirm.node.onclick = () => {
-			const form = new Form();
-			form.showForm();
+			/* 			const form = new Form();
+						form.showForm(); */
 			bagWrapper.destroy();
+
+
 		};
 		btnClose.node.onclick = () => {
 			bagWrapper.destroy();

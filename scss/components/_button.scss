@@ -15,3 +15,12 @@
 		cursor: pointer;
     }
 }
+
+.btn:disabled {
+	background-color: rgba(14, 2, 36, 0.13);
+	&:hover {
+        transform: none;
+        transition: none;
+		cursor: default;
+    }
+}
